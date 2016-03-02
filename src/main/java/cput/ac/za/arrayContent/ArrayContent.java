@@ -5,5 +5,5 @@ package cput.ac.za.arrayContent;
  */
 public class ArrayContent
 {
-
+    public String[] names = {"Ndzalie","Vulombe","McDave"};
 }

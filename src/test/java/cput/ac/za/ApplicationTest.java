@@ -1,5 +1,6 @@
 package cput.ac.za;
 
+import cput.ac.za.arrayContent.ArrayContent;
 import cput.ac.za.boleans.False;
 import cput.ac.za.floatingPoint.FloatingPoint;
 import cput.ac.za.integers.*;
@@ -26,6 +27,8 @@ public class ApplicationTest
     False aFalse = new False();
     NullNess nullNess = new NullNess();
     NonNullNess nonNullNess = new NonNullNess();
+    ArrayContent arrayContent = new ArrayContent();
+
     @Before
     public void setUpApplication() throws Exception {
         System.out.println("Hello Welcome to my application");
@@ -76,5 +79,12 @@ public class ApplicationTest
     @Test
     public void testNonNullNess() throws Exception{
         Assert.assertNotNull(nonNullNess.isNotNull());
+    }
+
+    @Test
+    public void testArrayContents() throws Exception
+    {
+        String[] naming = {"Ndzalie","Vulombe","McDave"};
+        //Assert.assertArrayEquals(arrayContent.names[0], "Vulombe");
     }
 }
