@@ -1,7 +1,9 @@
 package cput.ac.za;
 
-import cput.ac.za.arrayContent.ArrayContent;
+import cput.ac.za.arraycontent.ArrayContent;
 import cput.ac.za.boleans.False;
+import cput.ac.za.exception.Exceptions;
+import cput.ac.za.failing.Failing;
 import cput.ac.za.floatingPoint.FloatingPoint;
 import cput.ac.za.integers.*;
 import cput.ac.za.nulls.NonNullNess;
@@ -11,7 +13,9 @@ import cput.ac.za.objectIdentity.ObjectIdentity;
 import cput.ac.za.boleans.Truth;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
+
 
 /**
  * Created by student on 2016/03/02.
@@ -28,7 +32,10 @@ public class ApplicationTest
     NullNess nullNess = new NullNess();
     NonNullNess nonNullNess = new NonNullNess();
     ArrayContent arrayContent = new ArrayContent();
+    Exceptions exception = new Exceptions();
 
+    Failing failing = new Failing();
+    //Calculations calculations = new Calculations();
     @Before
     public void setUpApplication() throws Exception {
         System.out.println("Hello Welcome to my application");
@@ -39,6 +46,8 @@ public class ApplicationTest
     {
         float result  = fl.calculateFloat((float)1.2,(float)1.2);
         Assert.assertEquals((float)2.4,result,.0);
+
+
     }
 
     @Test
@@ -81,15 +90,21 @@ public class ApplicationTest
         Assert.assertNotNull(nonNullNess.isNotNull());
     }
 
+    @Ignore
+    @Test
+    public void testFailing() throws Exception {
+        Assert.fail(failing.failMessage());
+
+    }
     @Test
     public void testArrayContents() throws Exception
     {
-        String[] naming = {"Ndzalie","Vulombe","McDave"};
-       // Assert.assertArrayEquals("Vulombe",arrayContent.names[0]);
+        Assert.assertArrayEquals(arrayContent.names2, arrayContent.names);
     }
 
-    @Test
-    public void testCalculations() throws Exception
+   @Test(expected=IndexOutOfBoundsException.class)
+    public void testException() throws Exception
     {
+        exception.exceptionTest();
     }
 }
