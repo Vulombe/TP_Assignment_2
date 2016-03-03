@@ -85,6 +85,11 @@ public class ApplicationTest
     public void testArrayContents() throws Exception
     {
         String[] naming = {"Ndzalie","Vulombe","McDave"};
-        //Assert.assertArrayEquals(arrayContent.names[0], "Vulombe");
+       // Assert.assertArrayEquals("Vulombe",arrayContent.names[0]);
+    }
+
+    @Test
+    public void testCalculations() throws Exception
+    {
     }
 }

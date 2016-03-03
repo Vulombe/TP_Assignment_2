@@ -23,7 +23,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Chapter_2_Assignment" />
+        <module name="calculations" />
       </profile>
     </annotationProcessing>
   </component>
