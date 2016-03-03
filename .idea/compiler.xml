@@ -24,6 +24,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="calculations" />
+        <module name="displaymenu" />
       </profile>
     </annotationProcessing>
   </component>

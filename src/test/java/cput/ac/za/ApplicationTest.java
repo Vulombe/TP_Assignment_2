@@ -11,6 +11,7 @@ import cput.ac.za.nulls.NullNess;
 import cput.ac.za.objectEquality.ObjectEquality;
 import cput.ac.za.objectIdentity.ObjectIdentity;
 import cput.ac.za.boleans.Truth;
+import cput.ac.za.timeouts.TimeOuts;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -22,29 +23,41 @@ import org.junit.Test;
  */
 public class ApplicationTest
 {
-    FloatingPoint fl = new FloatingPoint();
-    Integers in = new Integers();
-    ObjectEquality oe = new ObjectEquality();
-    ObjectIdentity oi = new ObjectIdentity();
-    ObjectIdentity oi2 = new ObjectIdentity();
-    Truth truth = new Truth();
-    False aFalse = new False();
-    NullNess nullNess = new NullNess();
-    NonNullNess nonNullNess = new NonNullNess();
-    ArrayContent arrayContent = new ArrayContent();
-    Exceptions exception = new Exceptions();
+    FloatingPoint floatingPoint;
+    Integers integers;
+    ObjectEquality objectEquality;
+    ObjectIdentity objectIdentity;
+    ObjectIdentity objectIdentity1;
+    Truth truth;
+    False aFalse;
+    NullNess nullNess;
+    NonNullNess nonNullNess;
+    ArrayContent arrayContent;
+    Exceptions exception;
+    Failing failing;
+    TimeOuts timeOuts;
 
-    Failing failing = new Failing();
-    //Calculations calculations = new Calculations();
     @Before
     public void setUpApplication() throws Exception {
-        System.out.println("Hello Welcome to my application");
+        floatingPoint = new FloatingPoint();
+        integers = new Integers();
+        objectEquality = new ObjectEquality();
+        objectIdentity = new ObjectIdentity();
+        objectIdentity1 = new ObjectIdentity();
+        truth = new Truth();
+        aFalse = new False();
+        nullNess = new NullNess();
+        nonNullNess = new NonNullNess();
+        arrayContent = new ArrayContent();
+        exception = new Exceptions();
+        failing = new Failing();
+        timeOuts = new TimeOuts();
     }
 
     @Test
     public void testFloatingPoint() throws Exception
     {
-        float result  = fl.calculateFloat((float)1.2,(float)1.2);
+        float result  = floatingPoint.calculateFloat((float)1.2,(float)1.2);
         Assert.assertEquals((float)2.4,result,.0);
 
 
@@ -53,20 +66,20 @@ public class ApplicationTest
     @Test
     public void testIntegers() throws Exception
     {
-        int result  = in.calculateIntegers(2,2);
+        int result  = integers.calculateIntegers(2,2);
         Assert.assertEquals(4,result);
     }
 
     @Test
     public void testObjectEquality() throws Exception
     {
-        Assert.assertEquals("Vulombe",oe.displayName());
+        Assert.assertEquals("Vulombe",objectEquality.displayName());
     }
 
     @Test
     public void testObjectIdentity() throws Exception {
 
-        Assert.assertNotSame(oi2, oi);
+        Assert.assertNotSame(objectIdentity1, objectIdentity);
     }
 
     @Test
@@ -106,5 +119,11 @@ public class ApplicationTest
     public void testException() throws Exception
     {
         exception.exceptionTest();
+    }
+
+    @Test (timeout = 100)
+    public void testTimeOut() throws Exception
+    {
+        timeOuts.countingNumbers();
     }
 }

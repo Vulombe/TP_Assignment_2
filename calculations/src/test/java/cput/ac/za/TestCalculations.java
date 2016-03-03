@@ -1,5 +1,7 @@
 package cput.ac.za;
 
+
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -10,6 +12,7 @@ public class TestCalculations
     Calculations calculations = new Calculations();
     @Test
     public void testCalculations() throws Exception {
-
+        int result  = calculations.calculateIntegers(2,2);
+        Assert.assertEquals(4,result);
     }
 }
