@@ -8,6 +8,8 @@
     <modules>
         <module>calculations</module>
         <module>displaymenu</module>
+        <module>printresults</module>
+        <module>itemclasses</module>
     </modules>
     <packaging>pom</packaging>
 

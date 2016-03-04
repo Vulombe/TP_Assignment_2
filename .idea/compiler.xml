@@ -25,6 +25,8 @@
         <processorPath useClasspath="true" />
         <module name="calculations" />
         <module name="displaymenu" />
+        <module name="itemclasses" />
+        <module name="printresults" />
       </profile>
     </annotationProcessing>
   </component>

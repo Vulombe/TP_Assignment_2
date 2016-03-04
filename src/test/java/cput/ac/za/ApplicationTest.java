@@ -2,6 +2,7 @@ package cput.ac.za;
 
 import cput.ac.za.arraycontent.ArrayContent;
 import cput.ac.za.boleans.False;
+import cput.ac.za.disabling.Disabling;
 import cput.ac.za.exception.Exceptions;
 import cput.ac.za.failing.Failing;
 import cput.ac.za.floatingPoint.FloatingPoint;
@@ -36,6 +37,7 @@ public class ApplicationTest
     Exceptions exception;
     Failing failing;
     TimeOuts timeOuts;
+    Disabling disabling;
 
     @Before
     public void setUpApplication() throws Exception {
@@ -52,6 +54,7 @@ public class ApplicationTest
         exception = new Exceptions();
         failing = new Failing();
         timeOuts = new TimeOuts();
+        disabling = new Disabling();
     }
 
     @Test
@@ -108,6 +111,7 @@ public class ApplicationTest
     public void testFailing() throws Exception {
         Assert.fail(failing.failMessage());
 
+
     }
     @Test
     public void testArrayContents() throws Exception
@@ -125,5 +129,10 @@ public class ApplicationTest
     public void testTimeOut() throws Exception
     {
         timeOuts.countingNumbers();
+    }
+
+    @Ignore ("Not Yet Ready")
+    public void testDisabling() throws Exception {
+        disabling.disable();
     }
 }

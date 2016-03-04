@@ -7,10 +7,10 @@ public class DisplayMenu
 {
     public void displayMenu()
     {
-        System.out.println("1. Add");
-        System.out.println("2. Sabstract");
-        System.out.println("3. Multiply");
-        System.out.println("4. Devide");
-        System.out.println("5. Exit");
+        System.out.println("1. Display Items Menu");
+        System.out.println("2. Perform Calculations ");
+        System.out.println("3. Print Results");
+        System.out.println("4. Exit Application");
+
     }
 }

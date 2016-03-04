@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Chapter_2_Assignment.iml" filepath="$PROJECT_DIR$/Chapter_2_Assignment.iml" />
       <module fileurl="file://$PROJECT_DIR$/calculations/calculations.iml" filepath="$PROJECT_DIR$/calculations/calculations.iml" />
       <module fileurl="file://$PROJECT_DIR$/displaymenu/displaymenu.iml" filepath="$PROJECT_DIR$/displaymenu/displaymenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemclasses/itemclasses.iml" filepath="$PROJECT_DIR$/itemclasses/itemclasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/printresults/printresults.iml" filepath="$PROJECT_DIR$/printresults/printresults.iml" />
     </modules>
   </component>
 </project>
